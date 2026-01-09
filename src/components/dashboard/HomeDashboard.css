@@ -1,0 +1,137 @@
+.dashboard {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+}
+
+/* Header */
+.dashboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+}
+
+.dashboard__greeting h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-2);
+}
+
+.dashboard__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+/* CTA Section */
+.dashboard__cta {
+    margin-bottom: var(--space-8);
+}
+
+/* Stats Grid */
+.dashboard__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-10);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+}
+
+.stat-card__icon {
+    font-size: var(--font-size-3xl);
+}
+
+.stat-card__info {
+    flex: 1;
+}
+
+.stat-card__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-1);
+}
+
+.stat-card__value {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+/* Sections */
+.dashboard__section {
+    margin-bottom: var(--space-10);
+}
+
+.dashboard__section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-4);
+}
+
+/* Motivation Card */
+.dashboard__motivation {
+    margin-top: var(--space-8);
+}
+
+.motivation-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--gradient-glow);
+    border: 1px solid var(--color-border-accent);
+    border-radius: var(--radius-xl);
+}
+
+.motivation-card__icon {
+    font-size: var(--font-size-3xl);
+}
+
+.motivation-card__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-1);
+}
+
+.motivation-card__text {
+    font-size: var(--font-size-lg);
+    font-style: italic;
+    color: var(--color-text-primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .dashboard__stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard__header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .dashboard__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard__greeting h1 {
+        font-size: var(--font-size-2xl);
+    }
+}

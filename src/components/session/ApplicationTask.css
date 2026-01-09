@@ -1,0 +1,57 @@
+.application-task .task-card {
+    margin-bottom: var(--space-6);
+}
+
+.task-card__difficulty {
+    font-size: var(--font-size-sm);
+    color: var(--color-warning);
+    letter-spacing: 0.1em;
+}
+
+.task-response {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.task-response__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+.task-response__input {
+    width: 100%;
+    padding: var(--space-4);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    outline: none;
+    resize: vertical;
+    min-height: 150px;
+    transition: all var(--transition-fast);
+}
+
+.task-response__input:focus {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.task-response__input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.task-response__hint {
+    font-size: var(--font-size-sm);
+}
+
+.task-response__hint--warning {
+    color: var(--color-text-tertiary);
+}
+
+.task-response__hint--success {
+    color: var(--color-success);
+}

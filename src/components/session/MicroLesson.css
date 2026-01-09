@@ -1,0 +1,22 @@
+.micro-lesson .lesson-card {
+    margin-bottom: var(--space-6);
+}
+
+.lesson-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--color-bg-glass);
+    border-radius: var(--radius-lg);
+}
+
+.lesson-tip__icon {
+    font-size: var(--font-size-xl);
+}
+
+.lesson-tip__text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}

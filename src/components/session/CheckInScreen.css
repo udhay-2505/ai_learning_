@@ -1,0 +1,131 @@
+.check-in__section {
+    margin-bottom: var(--space-8);
+}
+
+.check-in__label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+/* Energy Level */
+.check-in__energy {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.check-in__energy-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    min-width: 80px;
+}
+
+.check-in__energy-btn:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+}
+
+.check-in__energy-btn.selected {
+    border-color: var(--color-accent-primary);
+    background: var(--gradient-glow);
+    transform: scale(1.05);
+}
+
+.check-in__energy-emoji {
+    font-size: var(--font-size-2xl);
+}
+
+.check-in__energy-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+}
+
+.check-in__energy-btn.selected .check-in__energy-label {
+    color: var(--color-text-primary);
+}
+
+/* Mental Load */
+.check-in__mental-load {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.check-in__load-btn {
+    padding: var(--space-3) var(--space-6);
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.check-in__load-btn:hover {
+    border-color: var(--color-border-hover);
+}
+
+.check-in__load-btn.selected {
+    border-color: var(--color-accent-primary);
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Time Override */
+.check-in__time {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.check-in__time-btn {
+    padding: var(--space-3) var(--space-5);
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.check-in__time-btn:hover {
+    border-color: var(--color-border-hover);
+}
+
+.check-in__time-btn.selected {
+    border-color: var(--color-accent-primary);
+    background: var(--gradient-glow);
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 600px) {
+    .check-in__energy {
+        flex-wrap: wrap;
+    }
+
+    .check-in__mental-load {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .check-in__time {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

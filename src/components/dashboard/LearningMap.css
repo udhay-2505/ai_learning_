@@ -1,0 +1,139 @@
+.learning-map {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.learning-map--empty {
+    padding: var(--space-8);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: var(--color-text-tertiary);
+}
+
+.learning-map__module {
+    padding: var(--space-5);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
+}
+
+.learning-map__module.active {
+    border-color: var(--color-accent-primary);
+    background: var(--gradient-glow);
+}
+
+.learning-map__module.complete {
+    border-color: var(--color-success);
+}
+
+.learning-map__module.locked {
+    opacity: 0.6;
+}
+
+.learning-map__module-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.learning-map__module-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border-radius: 50%;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+}
+
+.learning-map__module.active .learning-map__module-number {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.learning-map__module.complete .learning-map__module-number {
+    background: var(--color-success);
+    color: white;
+}
+
+.learning-map__module-info {
+    flex: 1;
+}
+
+.learning-map__module-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-1);
+}
+
+.learning-map__module-progress {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+}
+
+.learning-map__lock {
+    font-size: var(--font-size-lg);
+}
+
+/* Topics */
+.learning-map__topics {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.learning-map__topic {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.learning-map__topic:hover {
+    background: var(--color-bg-glass);
+}
+
+.learning-map__topic-indicator {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+}
+
+.learning-map__topic.complete .learning-map__topic-indicator {
+    color: var(--color-success);
+}
+
+.learning-map__topic.active .learning-map__topic-indicator {
+    color: var(--color-accent-primary);
+}
+
+.learning-map__topic-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learning-map__topic-title {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.learning-map__topic.complete .learning-map__topic-title {
+    color: var(--color-text-primary);
+}
+
+.learning-map__topic-sessions {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

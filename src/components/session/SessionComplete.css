@@ -1,0 +1,103 @@
+.session-complete {
+    text-align: center;
+}
+
+.session-complete__celebration {
+    margin-bottom: var(--space-10);
+}
+
+.session-complete__icon {
+    font-size: 80px;
+    margin-bottom: var(--space-4);
+    animation: bounce 0.6s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.session-complete__title {
+    font-size: var(--font-size-3xl);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-2);
+}
+
+.session-complete__message {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+.session-complete__stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.session-complete__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    min-width: 100px;
+}
+
+.session-complete__stat-icon {
+    font-size: var(--font-size-2xl);
+}
+
+.session-complete__stat-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.session-complete__stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.session-complete__encouragement {
+    padding: var(--space-4) var(--space-6);
+    background: var(--gradient-glow);
+    border: 1px solid var(--color-border-accent);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-8);
+}
+
+.session-complete__encouragement p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .session-complete__stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .session-complete__stat {
+        width: 100%;
+        max-width: 200px;
+    }
+}
